@@ -1,0 +1,105 @@
+<div class="container my-3">
+    <div class="row align-items-center py-5">
+        <div class="col-6">
+            <h3 class="my-5 text-primary text-uppercase">
+                Danh sách {{title}}</h2>
+        </div>
+
+        {{!-- <a class="btn btn-success btn-sm my-4" href="/{{data}}/add">Thêm {{title}}</a>
+        <form action="/{{data}}" id="form-search">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="searchkey" id="search-key" placeholder="Search" required>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </form> --}}
+        <div>
+            <a class="btn btn-warning btn-sm my-4 " href="/admin/waitConfirm">Danh sách tài khoản chờ</a>
+            <a class="btn btn-danger btn-sm my-4" href="/admin/bannedMany">Danh sách tài khoản bị khóa</a>
+            <a class="btn btn-secondary btn-sm my-4" href="/admin/destroy">Danh sách tài khoản vô hiệu hóa</a>
+            <a class="btn btn-success btn-sm my-4" href="/admin/confirmed">Danh sách tài khoản kích hoạt</a>
+            <a class="btn btn-primary btn-sm my-4" href="/admin/transfers">Giao dịch chuyển tiền đang chờ duyệt</a>
+            <a class="btn btn-dark btn-sm my-4" href="/admin/withdraw">Giao dịch rút tiền đang chờ duyệt</a>
+        </div>
+
+        {{#if users}}
+
+        <div class="container p-30">
+            <div class="row">
+                <div class="col-md-12 main-datatable">
+                    <div class="card_body">
+                        <div class="overflow-x">
+                            <table style="width:100%;" id="example" class="table cust-datatable dataTable no-footer">
+                                <thead>
+                                    <tr>
+                                        <th>Tên tài khoản</th>
+                                        <th>Họ và tên</th>
+                                        <th>Email</th>
+                                        <th>Ngày</th>
+                                        <th>Trạng thái</th>
+                                        <th>Xem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each users}}
+                                    <tr>
+                                        <td>{{username}}</td>
+                                        <td><a href="#">{{fullname}}</a></td>
+                                        <td>{{email}}</td>
+                                        <td>
+                                            {{getDate createdAt}}
+                                        </td>
+                                        <td>{{get_status status}}</td>
+                                        <td>
+                                            <span class="actionCust">
+                                                <a href="/admin/viewUser/{{username}}"><i class=" bi
+                                                            bi-eye-fill"></i></i></a>
+
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </tbody>
+        </table>
+        <p>Tổng số {{title}}: <strong class="text-danger">{{users.length}}</strong></p>
+        {{else}} <h3 class="text-center">Hiện danh sách người dùng đang trống</h3>
+        {{/if}}
+
+    </div>
+
+
+    <!-- Confirm delete -->
+    <div class="modal" tabindex="-1" role="dialog" id="modal-delete">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Xóa người dùng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc rằng muốn xóa {{title}}
+                        <strong class="name"></strong>?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    {{#if users}}
+                    <button type="button" class="btn btn-danger" onclick="confirmDeleteUser()">Xóa</button>
+                    {{else}} <button type="button" class="btn btn-danger" onclick="confirmDeleteProduct()">Xóa</button>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Confirm delete -->

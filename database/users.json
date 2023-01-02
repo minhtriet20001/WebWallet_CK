@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "63a19ce60d5992e9bd4911e5"
+  },
+  "roles": "user",
+  "username": "9732492763",
+  "password": "$2b$10$9F0RLCW4ahOl8k79YjCjgeBlxdb7B8XsLklGiBNP1Z7Opu3LUqra6",
+  "email": "cutitikg3@gmail.com",
+  "phone": "0123456781",
+  "birthday": "2001-12-12",
+  "address": "Hồ Chí Minh",
+  "cmndfront": "/images/9732492763/anh1.png",
+  "cmndback": "/images/9732492763/anh1.png",
+  "fullname": "Hữu Nhân",
+  "balance": 1375000,
+  "countlogin": "1",
+  "status": "confirmed",
+  "countFailed": 0,
+  "timeswithdrawal": {
+    "times": 0,
+    "date": 20
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671535846568"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538580343"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a079f60eb04f16004b51"
+  },
+  "roles": "user",
+  "username": "9090079683",
+  "password": "$2b$10$agDow8UIZAHJAi/i6Dn4Xei.TdVRC/DgAJcmurozSzkP0yLvsDSw2",
+  "email": "minhtriet20001@gmail.com",
+  "phone": "0123456789",
+  "birthday": "2001-10-12",
+  "address": "Hồ Chí Minh",
+  "cmndfront": "/images/9090079683/anh1.png",
+  "cmndback": "/images/9090079683/anh2.png",
+  "fullname": "Minh Triết",
+  "balance": 5275000,
+  "countlogin": "1",
+  "status": "confirmed",
+  "countFailed": 0,
+  "timeswithdrawal": {
+    "times": 2,
+    "date": 20
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671536761072"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538457311"
+    }
+  },
+  "__v": 0
+}]

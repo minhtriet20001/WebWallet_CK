@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Trang chủ</title>
+
+
+  <!-- Favicons -->
+  <link href="/images/img/favicon.png" rel="icon">
+  <link href="/images/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="/stylesheets/style.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- CDN Bootstrap5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css"
+    integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="/" class="logo d-flex align-items-center">
+        <h1>Yes Sir<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Trang chủ</a></li>
+          <li><a href="#clients">Đối tác</a></li>
+          <li><a href="#team">Thành viên</a></li>
+          <!-- Khi đăng nhập sẽ hiện nó lên -->
+          <li><a href="/recharge">Nạp tiền</a></li>
+          <li><a href="/tranfers">Chuyển tiền</a></li>
+          <li><a href="/withdrawal">Rút tiền</a></li>
+          <li><a href="/cards">Mua thẻ điện thoại</a></li>
+          <!-- Đăng nhập mới hiện lên và ẩn đi chữ đăng nhập -->
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="/images/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block  ps-2">{{email}}</span>
+            </a><!-- End Profile Iamge Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                <h6>{{fullname}}</h6>
+                <span>Web Designer</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="/users/profile">
+                  <i class="bi bi-person"></i>
+                  <span>Tài khoản</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center">
+                  <i class="bi bi-gear"></i>
+                  <span class="badge rounded-pill bg-{{confirm.status}}">{{confirm.msg}}</span>
+                </a>
+              </li>
+
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-wallet"></i>
+                  <span>{{balance}}</span><strong>VND</strong>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="/users/logout">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span id="toastbtn">Sign Out</span>
+                </a>
+              </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+          </li><!-- End Profile Nav -->
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Chào mừng đến với <span style="color: #f85a40;">Yes Sir</span></h2>
+          <p>Chớp mắt có tiền ngay. Yes Sir chắc chắn là như thế rùi ờ hơ.
+          </p>
+
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#" id="liveToastBtn" class="btn-get-started">Trải nghiệm ngay</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src="/images/img/hero-img.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><img src="/images/img/icon/pay.png" alt=""></div>
+              <h4 class="title"><a href="/recharge" class="stretched-link" id="myBtn">Nạp tiền</a></h4>
+            </div>
+          </div>
+          <!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><img src="/images/img/icon/fund.png" alt=""></i></div>
+              <h4 class="title"><a href="/tranfers" class="stretched-link" id="myBtn">Chuyển tiền</a>
+              </h4>
+            </div>
+          </div>
+          <!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><img src="/images/img/icon/cash-withdrawal.png" alt=""></div>
+              <h4 class="title"><a href="/withdrawal" class="stretched-link" id="myBtn">Rút tiền</a></h4>
+            </div>
+          </div>
+          <!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><img src="/images/img/icon/buy.png" alt=""></div>
+              <h4 class="title"><a href="/cards" class="stretched-link" id="myBtn">Mua thẻ điện
+                  thoại</a>
+              </h4>
+            </div>
+          </div>
+          <!--End Icon Box -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End Hero Section -->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+
+    <section id="clients" class="clients">
+      <div class="section-header">
+        <h2>Đối tác</h2>
+      </div>
+      <div class="container" data-aos="zoom-out">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/images/img/clients/logo-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="/images/img/clients/logo-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Các thành viên sáng lập</h2>
+
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="/images/img/team/team-1.jpg" class="img-fluid" alt="">
+              <h4>Christan Phu</h4>
+              <span>Web Development</span>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="/images/img/team/team-1.jpg" class="img-fluid" alt="#">
+              <h4>Minh Triết</h4>
+              <span>Dev</span>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="/images/img/team/team-1.jpg" class="img-fluid" alt="#">
+              <h4>Hữu Nhân</h4>
+              <span>Content</span>
+              <div class="social">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-6 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Yes Sir</span>
+          </a>
+          <p>Chung niềm tin, Vững tương lai - Together for the future</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 footer-contact text-center text-md-start">
+          <h4>Liên hệ chúng tôi</h4>
+          <p>
+            Đại học Tôn Đức Thắng <br>
+            19 Đ. Nguyễn Hữu Thọ, Tân Hưng, Quận 7<br>
+            Thành phố Hồ Chí Minh <br><br>
+            <strong>Số điện thoại:</strong> 0944 012 456<br>
+            <strong>Email:</strong> 519h@student.tdtu.edu.vn<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <!-- Toast -->
+  {{#if status}}
+  <div class="position-fixed top-50 start-50 translate-middle" style="z-index: 11;">
+    <div id="liveToast" class="toast align-items-center text-white bg-primary
+      border-0" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+      <div class="d-flex">
+        <div class="toast-body w-100 h-100">
+          <p class="fs-5 fw-bolder">{{status}}</p>
+        </div>
+        <button type="button" class="fs-3 btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+
+
+
+
+  <!--JS CDN -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <script src="/javascripts/main.js"></script>
+
+
+</body>
+
+</html>

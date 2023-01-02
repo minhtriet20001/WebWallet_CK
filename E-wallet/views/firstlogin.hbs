@@ -1,0 +1,40 @@
+<main>
+
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center min-vh-100 g-0">
+      <div class="col-12 col-md-8 col-lg-4 border-top border-3 border-primary rounded-3">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <div class="mb-4">
+              <h5>Thay đổi mật khẩu</h5>
+              <p></p>
+            </div>
+            <form method="post" action="/users/changePassWordFirstTime">
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Mật khẩu</label>
+                <input type="password" placeholder="Enter Your Pass" class="form-control" id="password"
+                  name="password" />
+              </div>
+              <div class="mb-3">
+                <label for="inputPassword" class="form-label">Xác nhận mật khẩu</label>
+                <input type="password" placeholder="Enter Your Pass" class="form-control" id="confirmPassword"
+                  name="confirmPassword" />
+              </div>
+              <div class="mb-3 d-grid">
+                <button type="submit" class="btn btn-primary">
+                  Đổi mật khẩu
+                </button>
+              </div>
+            </form>
+            <div class="mb-3 d-grid">
+              <a href="/users/logout" type="submit" class="btn btn-primary">
+                Đăng xuất
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

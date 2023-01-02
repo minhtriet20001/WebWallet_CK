@@ -1,0 +1,195 @@
+[{
+  "_id": {
+    "$oid": "63a1a4c6f60eb04f16004bea"
+  },
+  "codeID": "74406506077",
+  "typeTransaction": "Nạp tiền",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 0,
+  "balance": 4000000,
+  "message": "Tài khoản của bạn đã được nạp vào 4000000 số dư hiện tại của bạn là 4000000",
+  "currentBalance": "4000000",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671537862526"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671537862526"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a542f60eb04f16004bf8"
+  },
+  "codeID": "62024923625",
+  "typeTransaction": "Chuyển tiền",
+  "user_re_email": "cutitikg3@gmail.com",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 25000,
+  "balance": 500000,
+  "message": "Chuyển tiền từ Minh Triết",
+  "currentBalance": "3475000",
+  "side": "send",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671537989260"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671537989260"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a64cdc84891568b8f5c0"
+  },
+  "codeID": "77984188340",
+  "typeTransaction": "Rút tiền",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 100000,
+  "balance": 2000000,
+  "message": "Rút",
+  "currentBalance": "1275000",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671538252714"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538252714"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a670dc84891568b8f5c7"
+  },
+  "codeID": "85776574755",
+  "typeTransaction": "Mua thẻ",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 0,
+  "balance": 100000,
+  "message": "Bạn đã mua thẻ thành công",
+  "currentBalance": "1175000",
+  "Other": {
+    "codePhone": [
+      "1111124085",
+      "1111129537",
+      "1111153760",
+      "1111155990",
+      "1111117418"
+    ],
+    "nameTelecom": "viettel",
+    "price": 20000
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671538288586"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538288586"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a6c5dc84891568b8f5d1"
+  },
+  "codeID": "42824163582",
+  "typeTransaction": "Nạp tiền",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 0,
+  "balance": 10000000,
+  "message": "Tài khoản của bạn đã được nạp vào 10000000 số dư hiện tại của bạn là 11275000",
+  "currentBalance": "11275000",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671538373358"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538373358"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a703dc84891568b8f5dd"
+  },
+  "codeID": "10020106770",
+  "typeTransaction": "Chuyển tiền",
+  "user_re_email": "cutitikg3@gmail.com",
+  "email": "minhtriet20001@gmail.com",
+  "status": "Thành công",
+  "fee": 300000,
+  "balance": 6000000,
+  "message": "Rút tiền trên 5 triệu",
+  "currentBalance": "5275000",
+  "side": "receive",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671538435755"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538459738"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63a1a778dc84891568b8f5f2"
+  },
+  "codeID": "97537181751",
+  "typeTransaction": "Rút tiền",
+  "email": "cutitikg3@gmail.com",
+  "status": "Thành công",
+  "fee": 275000,
+  "balance": 5500000,
+  "message": "Rút tiền trên 5 triệu",
+  "currentBalance": "1375000",
+  "Other": {
+    "codePhone": []
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1671538552295"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671538580348"
+    }
+  },
+  "__v": 0
+}]

@@ -1,0 +1,190 @@
+<div class="container my-3">
+  <div class="row align-items-center py-5">
+    <div class="col-6">
+      <h2 class="my-5 text-primary text-uppercase">
+        Danh sách
+        {{title}}</h2>
+    </div>
+    <div class="container p-30">
+      <div>
+        <a class="btn btn-warning btn-sm my-4" href="/admin/waitConfirm">Danh
+          sách tài khoản chờ</a>
+        <a class="btn btn-danger btn-sm my-4" href="/admin/lock">Danh sách tài
+          khoản bị khóa</a>
+        <a class="btn btn-secondary btn-sm my-4" href="/admin/bannedMany">Danh
+          sách tài khoản vô hiệu hóa</a>
+        <a class="btn btn-success btn-sm my-4" href="/admin/confirmed">Danh sách
+          tài khoản kích hoạt</a>
+        <a class="btn btn-primary btn-sm my-4" href="/admin/transfers">Giao dịch
+          chuyển tiền đang chờ duyệt</a>
+        <a class="btn btn-dark btn-sm my-4" href="/admin/withdraw">Giao dịch rút
+          tiền đang chờ duyệt</a>
+      </div>
+      <div class="row">
+        <div class="col-md-12 main-datatable">
+          <div class="card_body">
+            <div class="overflow-x">
+              <table
+                style="width:100%;"
+                id="example"
+                class="table cust-datatable dataTable no-footer"
+              >
+                <thead>
+                  <tr>
+                    <th style="min-width:150px;">Mã giao dịch</th>
+                    <th style="min-width:150px;">Loại giao dịch</th>
+                    <th style="min-width:150px;">Email</th>
+                    <th style="min-width:150px;">Số tiền</th>
+                    <th style="min-width:100px;">Ngày thực hiện</th>
+                    <th style="min-width:150px;">Trạng thái</th>
+                    <th style="min-width:150px;">Xem</th>
+
+                  </tr>
+                </thead>
+                {{#if histories}}
+                <tbody>
+                  {{#each histories}}
+                    <tr>
+                      <td>{{codeID}}</td>
+                      <td>{{typeTransaction}}</td>
+                      <td>{{email}}</td>
+                      <td>{{balance}}</td>
+                      <td>{{getDate createdAt}}</td>
+                      <td>
+                        <span
+                          class="mode {{class_status status}}"
+                        >{{status}}</span>
+                      </td>
+
+                      <td>
+                        <span class="actionCust">
+                          <a
+                            data-bs-toggle="modal"
+                            data-bs-target="#modal-history-{{codeID}}"
+                            href="#"
+                          ><i class="bi bi-eye-fill"></i></a>
+                        </span>
+                      </td>
+                    </tr>
+                    <div
+                      class="modal fade modal-history-user"
+                      id="modal-history-{{codeID}}"
+                      tabindex="-1"
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Thông
+                              tin chi tiết</h5>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="container-fluid border">
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Mã giao dịch</div>
+                                <div
+                                  class="col-md-6 border border-primary"
+                                >{{codeID}}</div>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Trạng thái</div>
+                                <div class="col-md-6 border border-primary">
+                                  <span
+                                    class="badge
+                                      {{class_status_modal status}}
+                                      mt-1"
+                                  >{{status}}</span>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Phí giao dịch</div>
+                                <div
+                                  class="col-md-6 border border-primary"
+                                >{{fee}}</div>
+                              </div>
+
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Loại giao dịch
+                                </div>
+                                <div
+                                  class="col-md-6 border border-primary"
+                                >{{typeTransaction}}</div>
+                                <div class="row">
+                                </div>
+                              </div>
+                              
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Ngày
+                                </div>
+                                <div
+                                  class="col-md-6 border border-primary"
+                                >{{getDate createdAt}}</div>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Lời nhắn
+                                </div>
+                                <div class="col-md-6 border border-primary">
+                                  {{note}}
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div
+                                  class="col-md-6 fw-bold fs-5 border border-primary"
+                                >Số tiền</div>
+                                <div
+                                  class="col-md-6 border border-primary"
+                                >{{balance}}</div>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div
+                            class="modal-footer d-flex justify-content-center"
+                          >
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary"
+                              data-bs-dismiss="modal"
+                            >Đóng</button>
+                             <button
+                              type="button"
+                              onclick="acceptWithdraw('{{codeID}}')"
+                              class="btn btn-outline-success"
+                            >Phê duyệt</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {{/each}}
+                </tbody>
+                {{else}} <h3 class="text-center">Hiện danh sách giao dịch đang trống</h3>
+                {{/if}}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<section class="vh-100" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5">
+            <h3 class="mb-5 text-center">Đăng nhập</h3>
+            <form method="post">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="username">Tên tài khoản</label>
+                <input type="text" id="username" class="form-control form-control-lg" name="username"
+                  value="{{username}}" required />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Mật khẩu</label>
+                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" name="password"
+                  required />
+              </div>
+              <div class="d-flex justify-content-between">
+
+                <button class="btn btn-primary btn-lg btn-block " type="submit">Đăng nhập</button>
+                <strong class="d-flex align-items-end"><a href="/users/forgetEmail">Quên mật khẩu</a></strong></span>
+
+              </div>
+              <hr class="my-4" />
+              <div class="mt-4 pt-2">
+                <span>Bạn chưa có có tài khoản!
+                  <strong><a href="/users/register">Hãy đăng kí</a></strong></span>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
